@@ -7,6 +7,7 @@
     "start": "npm run build:prod && NODE_ENV=prod node ./public/bundle.server.js",
     "start:dev": "concurrently 'npm run build:client:dev' 'npm run build:server:dev' 'NODE_ENV=dev nodemon ./public/bundle.server.js'",
     "start:dev:client-only": "webpack-dev-server --open",
+    "heroku-postbuild": "webpack --config webpack.prod.js",
     "build:prod": "npm run build:server && npm run build:client",
     "build:client": "webpack --config webpack.prod.config.js --profile",
     "build:client:dev": "webpack --profile --watch",
