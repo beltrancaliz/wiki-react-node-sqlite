@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.9.0"
+  },
   "scripts": {
     "start": "npm run build:prod && NODE_ENV=prod node ./public/bundle.server.js",
     "start:dev": "concurrently 'npm run build:client:dev' 'npm run build:server:dev' 'NODE_ENV=dev nodemon ./public/bundle.server.js'",
