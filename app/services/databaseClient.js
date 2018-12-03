@@ -29,6 +29,15 @@ const databaseClient = () => {
     return entries
   }
 
+  // const getEntriy = () => {
+  //   const db = new Sql(dbPath)
+  //   const query = `SELECT * FROM wiki ORDER BY datetime(date_created) DESC WHERE id = ${}`
+  //   const entries = db.prepare(query).all()
+  //   db.close()
+  //
+  //   return entries
+  // }
+
   return {
     insertEntry,
     listEntries
